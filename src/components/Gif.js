@@ -1,3 +1,10 @@
-export default function Gif({ images }) {
-  return <img src={images.downsized_large.url} alt='gif' />;
+export default function Gif({ images, selectedGif }) {
+  return (
+    <img
+      className='img'
+      src={images.downsized_large.url}
+      alt='gif'
+      onClick={() => selectedGif(images.downsized_large.url)}
+    />
+  );
 }
